@@ -7,10 +7,20 @@ public class Mover : MonoBehaviour
 
     void Start()
     {
-        
+        callDebug();
     }
 
     void Update()
+    {
+        movePlayer();
+    }
+
+    void callDebug()
+    {
+        Debug.Log("Welcome to the game !");
+    }
+
+    void movePlayer()
     {
         float xValue = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         float yValue = 0f;
