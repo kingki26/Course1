@@ -1,23 +1,18 @@
- using UnityEngine;
+using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
+
     [SerializeField] float moveSpeed = 10f;
-
-
     void Start()
     {
-        callDebug();
+        
     }
 
+ 
     void Update()
     {
         movePlayer();
-    }
-
-    void callDebug()
-    {
-        Debug.Log("Welcome to the game !");
     }
 
     void movePlayer()
