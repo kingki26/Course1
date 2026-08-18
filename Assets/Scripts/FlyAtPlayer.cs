@@ -6,10 +6,6 @@ public class FlyAtPlayer : MonoBehaviour
     [SerializeField] float speed = 1.0f;
     Vector3 playerPosition;
 
-    private void Awake()
-    {
-        gameObject.SetActive(false);
-    }
     void Start()
     {
         playerPosition = player.transform.position;
@@ -22,7 +18,6 @@ public class FlyAtPlayer : MonoBehaviour
 
     void MoveToPlayer()
     {
-        transform.position =
         transform.position = Vector3.MoveTowards(transform.position, playerPosition, Time.deltaTime * speed);
     }
 
